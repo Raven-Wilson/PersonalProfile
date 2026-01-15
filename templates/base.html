@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        {% block head %} {% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="head-container">
+                    <li>
+                        <a href="/"> <img src="{{ url_for('static', filename='image/temp.png') }}"> </a>
+                    </li>
+                    <li id="home" class="temp">
+                        <a href="/"> Home </a>
+                    </li>
+                    <li id="education" class="temp">
+                        <a href="/education"> Education </a>
+                    </li>
+                    <li id="interests" class="temp">
+                        <a href="/interests"> Interests </a>
+                    </li>
+                    <li id="contact" class="temp">
+                        <a href="/contact"> Contact </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        {% block body %}{% endblock %}
+        <footer>
+        </footer>
+    </body>
+</html>

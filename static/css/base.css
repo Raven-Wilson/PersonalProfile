@@ -1,0 +1,14 @@
+body {
+    margin: 1em;
+    background-color: bisque ;
+}
+#head-container {
+    display: grid;
+    grid-template-columns: 72% 7% 7% 7% 7%;
+    background-color: aliceblue;
+    padding: .1em;
+}
+
+li{
+    list-style-type: none;
+}
