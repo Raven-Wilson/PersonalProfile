@@ -8,11 +8,9 @@
     </head>
     <body>
         <header>
-            <nav>
-                <ul id="head-container">
-                    <li>
-                        <a href="/"> <img src="{{ url_for('static', filename='image/temp.png') }}"> </a>
-                    </li>
+            <nav id="head-container">
+                <a href="/"> <img id="head-img" src="{{ url_for('static', filename='image/temp.png') }}"> </a>
+                <ul id="links-container">
                     <li id="home" class="temp">
                         <a href="/"> Home </a>
                     </li>
@@ -30,6 +28,17 @@
         </header>
         {% block body %}{% endblock %}
         <footer>
+            <div id="footer-container">
+                <div class="section1">
+                    <h4>Contacts</h4>
+                </div>
+                <div>
+                    <h4>Sample</h4>
+                </div>
+                <div>
+                    <a href="/"> <img src="{{ url_for('static', filename='image/temp.png') }}"> </a>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
