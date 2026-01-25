@@ -8,19 +8,21 @@ body {
     display: grid;
     grid-template-columns: 10% 50% 40%;
     background-color: #503F6C;
-    
     color: #F5BBC4;
+    box-shadow: 0 5px 5px #00000080;
 }
 #head-container a {
     grid-column: 1/2;
 }
 #head-img {
     display: flex;
+    height: 100%;
 }
 #links-container {
     grid-column: 3/4;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    font-size: 1.1em;
 }
 a:link, a:visited {
     text-decoration: none;
@@ -28,6 +30,7 @@ a:link, a:visited {
 }
 a:hover {
     color: #320A28;
+    font-weight: bold;
 }
 
 li{
@@ -39,4 +42,12 @@ li{
     text-align: center;
     background-color: #511730;
     color: #F5BBC4;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.section1{
+    text-align: left;
+}
+.section3 {
+    text-align: right;
 }

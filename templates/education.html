@@ -2,8 +2,55 @@
 
 {% block head %}
 <title> Education </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/education.css') }}">
 {% endblock %}
 
 {% block body %}
-    <h1> HEllo Education</h1>
+    <div class="panels">
+        <div class="panel panel1">
+            <div>
+                <p>Technological University of the Shannon</p>
+            </div>
+            <div>
+                <p>Course: Software Development <br> 
+                GPA: 73% <br> <br>
+                Modules: </p>
+            </div>
+        </div>
+        <div class="panel panel2">
+            <div>
+                <p>Limerick College of Further Education</p>
+            </div>
+            <div>
+                <p>Course: Software Development <br> 
+                Grade: Distinction <br><br>
+                Modules: Web Authoring, Database Methods, Maths for IT, <br> 
+                Communications, Fundementals of OPP, Software Architecture</p>
+            </div>
+        </div>
+        <div class="panel panel3">
+            <div>
+                <p>St. Patricks Comprehensive School</p>
+            </div>
+            <div>
+                <p>Points: 379 <br> <br>
+                Classes: Business Studies, LCVP, History, Art, French, English, Maths, Irish</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const panels = document.querySelectorAll(".panel");
+        function toggleOpen() {
+            this.classList.toggle("open");
+        };
+        function toggleActive(e) {
+            if(e.propertyName.includes("flex")) {
+                this.classList.toggle("open-active");
+            };
+        };
+        panels.forEach(panel => panel.addEventListener("mouseover", toggleOpen));
+        panels.forEach(panel => panel.addEventListener("mouseout", toggleOpen));
+        panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
+    </script>
 {% endblock %}

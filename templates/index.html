@@ -1,9 +1,24 @@
 {% extends 'base.html' %}
 
 {% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 <title> Home </title>
 {% endblock %}
 
 {% block body %}
-    <h1> Hello Home </h1>
+<div id="header-index">
+    <div id="image-continer">
+        <img id="heroImg" src="{{ url_for('static', filename='image/temp2.png') }}">
+    </div>
+    <div id="heroText">
+        <h1> Raven Wilson </h1>
+    </div>
+    <div id="quote">
+        <h2> Qoute </h2>
+    </div>
+</div>
+<div>
+    <h2>About Me</h2>
+    <p>I was introduced to the world of STEM through a Technovation Women in STEM program where we were able to dip our toes into coding </p>
+</div>
 {% endblock %}
