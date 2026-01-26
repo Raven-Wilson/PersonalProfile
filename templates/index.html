@@ -8,17 +8,33 @@
 {% block body %}
 <div id="header-index">
     <div id="image-continer">
-        <img id="heroImg" src="{{ url_for('static', filename='image/temp2.png') }}">
     </div>
     <div id="heroText">
         <h1> Raven Wilson </h1>
+        <p>Student Software Developer</p>
     </div>
     <div id="quote">
         <h2> Qoute </h2>
     </div>
 </div>
-<div>
-    <h2>About Me</h2>
-    <p>I was introduced to the world of STEM through a Technovation Women in STEM program where we were able to dip our toes into coding </p>
+<div id="body-container">
+    <div id="text">
+        <h2>About Me</h2>
+        <p>I am currently studying Software Development at TUS. I fell in love with coding after partaking in a Women in STEM
+            program by Technovation in secondary school, where we would be guided on how to make our own app. I've always loved art so finding a new 
+            interest where I could express my creativity while being able to make something practical immediately let me know this was the career path for me.
+        </p>
+        <p>
+            My goal is to be a full stack developer when I'm finished college. I love the design elements of UX and the idea of being able to create an
+            intricate backend along side it. I also want to be full stack because I like the idea of being able transition and work with different 
+            teams, whether they work with front or backend, within the company I work for in the future.
+        </p>
+    </div>
+    <div  id="left-corner">
+        <img class="corner-img" src="{{ url_for('static', filename='image/cornerDecoration.png') }}">
+    </div>
+    <div id="right-corner">
+        <img class="corner-img" src="{{ url_for('static', filename='image/cornerDecoration.png') }}">
+    </div>
 </div>
 {% endblock %}

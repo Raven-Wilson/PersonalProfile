@@ -1,17 +1,20 @@
 #header-index {
     display: grid;
-    height: 550px;
+    height: 90vh;
     grid-template-columns: 19% 19% 19% 19% 19% 5%;
     grid-template-rows: 11% 22% 24% 22% 11% 10%;
 }
 #image-continer {
     grid-column: 1/7;
     grid-row: 1/6;
+    background-image: url("/static/image/hero.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #heroImg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     display: block;
     box-shadow: 0 5px 5px #00000080;
 }
@@ -21,13 +24,50 @@
     background-color: #00000080;
     color: aliceblue;
     border-radius: 5%;
+    text-align: right;
 }
 #heroText h1 {
     margin: 1em;
-    text-align: right;
+    font-size: 3em;
+}
+#heroText p {
+    margin: 3em;
+    font-size: 1.5em;
 }
 #quote {
     color: aliceblue;
     grid-column: 1/6;
     grid-row: 6/7;
+}
+#body-container {
+    position: relative;
+    display: grid;
+    /*
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 7% 83% 10%;
+    */
+    height: 100vh;
+    box-sizing: border-box;
+}
+#text {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+#left-corner {
+    transform: rotate(90deg);
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 12vw;
+}
+#right-corner {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    width: 12vw;
+}
+.corner-img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }

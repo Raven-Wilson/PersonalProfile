@@ -23,8 +23,8 @@
             </div>
             <div>
                 <p>Course: Software Development <br> 
-                Grade: Distinction <br><br>
-                Modules: Web Authoring, Database Methods, Maths for IT, <br> 
+                Grade: Distinction <br> <br>
+                Modules: Web Authoring, Database Methods, Maths for IT,
                 Communications, Fundementals of OPP, Software Architecture</p>
             </div>
         </div>
@@ -40,6 +40,7 @@
     </div>
 
     <script>
+        /*
         const panels = document.querySelectorAll(".panel");
         function toggleOpen() {
             this.classList.toggle("open");
@@ -52,5 +53,15 @@
         panels.forEach(panel => panel.addEventListener("mouseover", toggleOpen));
         panels.forEach(panel => panel.addEventListener("mouseout", toggleOpen));
         panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
+        */
+        const panels = document.querySelectorAll(".panel");
+        /*const last = panels[panels.length - 1];
+        console.log(last);
+        */
+        function open() {
+            this.classList.add("animationText");
+        }
+        const parent = panels.forEach(panel => panel.length-1);
+        console.log(parent);
     </script>
 {% endblock %}

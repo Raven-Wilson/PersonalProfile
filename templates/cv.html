@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> CV </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cv.css') }}">
+{% endblock %}
+
+{% block body %}
+<div id="contanier">
+    <iframe id="resume" src="{{ url_for('static', filename='pdf/CV.pdf') }}"></iframe>
+    <div id="contacts">
+        <h1>Contact Information</h1>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/raven-wilson-a439b9398/">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://github.com/Raven-Wilson">GitHub</a>
+                </li>
+                <li>
+                    <a href="mailto:18r.m.wilson@gmail.com">Personal Email</a>
+                </li>
+                <li>
+                    <a href="mailto:K00321719@student.tus.ie">College Email</a>
+                </li>
+            </ul>
+    </div>
+</div>
+{% endblock %}
+
+
