@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"> -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
         {% block head %} {% endblock %}
     </head>
     <body>
         <header>
+            <!--
             <nav id="head-container">
                 <a href="/"> <img id="head-img" src="{{ url_for('static', filename='image/temp.png') }}"> </a>
                 <ul id="links-container">
@@ -25,9 +27,32 @@
                     </li>
                 </ul>
             </nav>
+            -->
+            <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a href="/" class="navbar-item"> 
+                        <img id="head-img" src="{{ url_for('static', filename='image/temp.png') }}"> 
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item" href="/"> Home </a>
+                        <a class="navbar-item" href="/education"> Education </a>
+                        <a class="navbar-item" href="/experience"> Experience </a>
+                        <a class="navbar-item" href="/cv"> Contact/CV </a>
+                    </div>
+                </div>
+            </nav>
         </header>
         {% block body %}{% endblock %}
         <footer>
+            <!--
             <div id="footer-container">
                 <div class="section1">
                     <ul>
@@ -55,6 +80,53 @@
                     <a href="/"> <img src="{{ url_for('static', filename='image/temp.png') }}"> </a>
                 </div>
             </div>
+            
+            <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
+      The source code is licensed
+      <a href="https://opensource.org/license/mit">MIT</a>. The
+      website content is licensed
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0//"
+        >CC BY NC SA 4.0</a
+      >.
+    </p>
+  </div>
+</footer>
+
+<div class="columns is-desktop is-centered">
+  <div class="column">First column</div>
+  <div class="column">Second column</div>
+  <div class="column">Third column</div>
+</div>
+-->
+        <footer class="footer">
+            <div class="columns is-desktop">
+                <div class="column">
+                    <h4>Contact Information</h4>
+                    <a href="https://www.linkedin.com/in/raven-wilson-a439b9398/">LinkedIn</a>
+                    <a href="https://github.com/Raven-Wilson">GitHub</a>
+                    <a href="mailto:18r.m.wilson@gmail.com">Personal Email</a> 
+                    <a href="mailto:K00321719@student.tus.ie">College Email</a>
+                </div>
+            </div>
         </footer>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', ()=> {
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
