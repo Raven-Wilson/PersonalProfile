@@ -2,38 +2,58 @@
 
 {% block head %}
 <title> Education </title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/education.css') }}">
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/education.css') }}">-->
 {% endblock %}
 
 {% block body %}
-    <div class="panels">
-        <div class="panel panel1">
-            <div>
+    <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">Card header</p>
+    <button class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </header>
+</div>
+    <div class="card m-6">
+        <div class="card-content">
+            <div class="card-header">
                 <p>Technological University of the Shannon</p>
             </div>
-            <div>
+            <div class="content">
                 <p>Course: Software Development <br> 
-                GPA: 73% <br> <br>
-                Modules: </p>
+                GPA: 73% <br> <br> <hr>
+                Modules: <br>
+                Year 2- <br>
+                Semester 2: Applications Development, Real Time Embedded Systems, Problem-Solving with Data Structures and Algorithms,
+                Data Driven Systems, Software Testing, Public Cloud Foundations <br>
+                Semester 1: Object Oriented Theory and Programming, Software Development, Discrete Mathematics, Fundamentals of Data 
+                Structures and Algorithms, Data Design and Programming, Networking Fundamentals
+            </p>
             </div>
         </div>
-        <div class="panel panel2">
-            <div>
+    </div>
+    <div class="card m-6">
+        <div class="card-content">
+            <div class="card-header">
                 <p>Limerick College of Further Education</p>
             </div>
-            <div>
+            <div class="content">
                 <p>Course: Software Development <br> 
-                Grade: Distinction <br> <br>
+                Grade: Distinction <br> <br><hr>
                 Modules: Web Authoring, Database Methods, Maths for IT,
                 Communications, Fundementals of OPP, Software Architecture</p>
             </div>
         </div>
-        <div class="panel panel3">
-            <div>
+    </div>
+    <div class="card m-6">
+        <div class="card-content">
+            <div class="card-header">
                 <p>St. Patricks Comprehensive School</p>
             </div>
-            <div>
-                <p>Points: 379 <br> <br>
+            <div class="content">
+                <p>Points: 379 <br> <br><hr>
                 Classes: Business Studies, LCVP, History, Art, French, English, Maths, Irish</p>
             </div>
         </div>
