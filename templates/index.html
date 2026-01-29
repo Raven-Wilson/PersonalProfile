@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">-->
 <title> Home </title>
 {% endblock %}
 
 {% block body %}
-<div id="header-index">
+<section id="header-index" class="hero is-link is-medium">
+    <!--
     <div id="image-continer">
     </div>
-    <div id="heroText">
-        <h1> Raven Wilson </h1>
-        <p>Student Software Developer</p>
+    -->
+    <div id="heroText" class="hero-body">
+        <p class="title"> Raven Wilson </p>
+        <p class="subtitle">Student Software Developer</p>
     </div>
     <div id="quote">
         <h2> Qoute </h2>
     </div>
-</div>
-<div id="body-container">
-    <div id="text">
+</section>
+<div id="body-container" class="content container">
+    <div id="text" class="m-6">
         <h2>About Me</h2>
         <p>I am currently studying Software Development at TUS. I fell in love with coding after partaking in a Women in STEM
             program by Technovation in secondary school, where we would be guided on how to make our own app. I've always loved art so finding a new 
@@ -30,11 +32,13 @@
             teams, whether they work with front or backend, within the company I work for in the future.
         </p>
     </div>
+    <!--
     <div  id="left-corner">
         <img class="corner-img" src="{{ url_for('static', filename='image/cornerDecoration.png') }}">
     </div>
     <div id="right-corner">
         <img class="corner-img" src="{{ url_for('static', filename='image/cornerDecoration.png') }}">
     </div>
+    -->
 </div>
 {% endblock %}
