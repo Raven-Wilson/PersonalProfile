@@ -2,15 +2,14 @@
 
 {% block head %}
 <title> CV </title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/cv.css') }}">
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/cv.css') }}">-->
 {% endblock %}
 
 {% block body %}
-<div id="contanier">
-    <iframe id="resume" src="{{ url_for('static', filename='pdf/CV.pdf') }}"></iframe>
-    <div id="contacts">
-        <h1>Contact Information</h1>
-            <ul>
+<div id="contanier" class="columns mt-6 ml-3">
+    <aside id="contacts" class="menu">
+        <p class="menu-label">Contact Information</p>
+            <ul class="menu-list">
                 <li>
                     <a href="https://www.linkedin.com/in/raven-wilson-a439b9398/">LinkedIn</a>
                 </li>
@@ -24,8 +23,12 @@
                     <a href="mailto:K00321719@student.tus.ie">College Email</a>
                 </li>
             </ul>
+    </aside>
+    <div class="column is-half m-6">
+        <iframe class="image is-3by4" id="resume" src="{{ url_for('static', filename='pdf/CV.pdf') }}"></iframe>
     </div>
 </div>
+
 {% endblock %}
 
 

@@ -31,7 +31,7 @@
             <nav class="navbar is-info" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
                     <a href="/" class="navbar-item"> 
-                        <img id="head-img" src="{{ url_for('static', filename='image/temp.png') }}"> 
+                        <img id="head-img" src="{{ url_for('static', filename='image/fav.png') }}"> 
                     </a>
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
@@ -112,13 +112,19 @@
                         <p><a href="mailto:K00321719@student.tus.ie">College Email</a></p>
                     </div>
                 </div>
-                <div class="column level-item" >
-                    <p class="heading">Contact Information</p>
-                    
+                <div class="column is-desktop level-item" >
+                    <div>
+                        <p>See New Page</p>
+                        <p><a href="/"> Home </a></p>
+                        <p><a href="/education"> Education </a></p>
+                        <p><a href="/experience"> Experience </a></p>
+                        <p><a href="/cv"> Contact/CV </a></p>
+                    </div>
                 </div>
                 <div class="column level-item" >
-                    <p class="heading">Contact Information</p>
-                    
+                    <a href="/" class=""> 
+                        <img style="height: 5vh; width: auto;" id="head-img" src="{{ url_for('static', filename='image/fav.png') }}"> 
+                    </a>
                 </div>
             </div>
         </footer>
