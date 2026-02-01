@@ -8,14 +8,15 @@
 {% block body %}
 <div id="contanier" class="columns mt-6 ml-3">
     <aside id="contacts" class="menu">
-        <p class="menu-label">Contact Information</p>
+        <h2 class="menu-label has-text-info">Contact Information</h2>
             <ul class="menu-list">
                 <li>
                     <a href="https://www.linkedin.com/in/raven-wilson-a439b9398/">LinkedIn</a>
                 </li>
-                <li>
-                    <a href="https://github.com/Raven-Wilson">GitHub</a>
-                </li>
+            </ul>
+        <hr>
+        <p class="menu-label has-text-info">Email Me</p>
+            <ul class="menu-list">
                 <li>
                     <a href="mailto:18r.m.wilson@gmail.com">Personal Email</a>
                 </li>
@@ -23,8 +24,23 @@
                     <a href="mailto:K00321719@student.tus.ie">College Email</a>
                 </li>
             </ul>
+        <hr>
+        <p class="menu-label has-text-info">GitHub</p>
+            <ul class="menu-list">
+                <li>
+                    <a href="https://github.com/Raven-Wilson">My Profile</a>
+                </li>
+                <li>
+                    <a href="https://github.com/Raven-Wilson/PersonalProfile">Portfolio Website Repository</a>
+                </li>
+                <li>
+                    <a href="https://github.com/Raven-Wilson/JavaScript30">JavaScript 30 Repository</a>
+                </li>
+            </ul>
+        <hr>
     </aside>
-    <div class="column is-half m-6">
+    <div class="column ml-6 mr-6 pl-6 pr-6">
+        <h1 class="title has-text-info-light">My CV</h1>
         <iframe class="image is-3by4" id="resume" src="{{ url_for('static', filename='pdf/CV.pdf') }}"></iframe>
     </div>
 </div>

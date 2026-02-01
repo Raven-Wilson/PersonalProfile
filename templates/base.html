@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html data-theme="dark" lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="">
         <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"> -->
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+         <link rel="icon" href="{{ url_for('static', filename='image/fav.png') }}">
         {% block head %} {% endblock %}
     </head>
     <body>
@@ -31,8 +32,11 @@
             <nav class="navbar is-info" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
                     <a href="/" class="navbar-item"> 
-                        <img id="head-img" src="{{ url_for('static', filename='image/fav.png') }}"> 
+                        <img alt="Raven silhouette on blue background" id="head-img" src="{{ url_for('static', filename='image/fav.png') }}"> 
                     </a>
+                    <buttom class="button is-info"> 
+                        <a class="has-text-black-bis" href="{{ url_for('static', filename='pdf/CV.pdf') }}" download="CV.pdf">Download CV</a> 
+                    </buttom>
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
@@ -123,7 +127,7 @@
                 </div>
                 <div class="column level-item" >
                     <a href="/" class=""> 
-                        <img style="height: 5vh; width: auto;" id="head-img" src="{{ url_for('static', filename='image/fav.png') }}"> 
+                        <img alt="Raven silhouette on blue background" style="height: 5vh; width: auto;" id="head-img" src="{{ url_for('static', filename='image/fav.png') }}"> 
                     </a>
                 </div>
             </div>
