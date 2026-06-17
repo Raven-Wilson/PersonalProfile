@@ -1,0 +1,10 @@
+.socialLinks {
+  height: 2em;
+  margin: 0.8em;
+  background-color: rgb(102, 209, 255);
+  border-radius: 5px;
+}
+.socialLinks:hover {
+  height: 2.1em;
+  /* transform: rotate(5deg); */
+}

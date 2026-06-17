@@ -1,16 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html data-theme="dark" lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"> -->
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-         <link rel="shortcut icon" href="{{ url_for('static', filename='image/fav.ico') }}">
-        {% block head %} {% endblock %}
-    </head>
-    <body>
-        <header>
-            <!--
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/base.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='image/fav.ico') }}"
+    />
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <header>
+      <!--
             <nav id="head-container">
                 <a href="/"> <img id="head-img" src="{{ url_for('static', filename='image/temp.png') }}"> </a>
                 <ul id="links-container">
@@ -29,34 +38,53 @@
                 </ul>
             </nav>
             -->
-            <nav class="navbar is-info" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a href="/" class="navbar-item"> 
-                        <img alt="Raven silhouette on blue background" id="head-img" src="{{ url_for('static', filename='image/logo.png') }}"> 
-                    </a>
-                    <buttom class="button is-info"> 
-                        <a class="has-text-black-bis" href="{{ url_for('static', filename='pdf/CV.pdf') }}" download="CV.pdf">Download CV</a> 
-                    </buttom>
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a class="navbar-item" href="/"> Home </a>
-                        <a class="navbar-item" href="/education"> Education </a>
-                        <a class="navbar-item" href="/experience"> Experience </a>
-                        <a class="navbar-item" href="/cv"> Contact/CV </a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        {% block body %}{% endblock %}
-        <footer>
-            <!--
+      <nav
+        class="navbar is-info"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand">
+          <a href="/" class="navbar-item">
+            <img
+              alt="Raven silhouette on blue background"
+              id="head-img"
+              src="{{ url_for('static', filename='image/logo.png') }}"
+            />
+          </a>
+          <buttom class="button is-info">
+            <a
+              class="has-text-black-bis"
+              href="{{ url_for('static', filename='pdf/CV-Raven-Wilson.pdf') }}"
+              download="CV.pdf"
+              >Download CV</a
+            >
+          </buttom>
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="/"> Home </a>
+            <a class="navbar-item" href="/education"> Education </a>
+            <a class="navbar-item" href="/experience"> Experience </a>
+            <a class="navbar-item" href="/cv"> Contact/CV </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {% block body %}{% endblock %}
+    <footer>
+      <!--
             <div id="footer-container">
                 <div class="section1">
                     <ul>
@@ -105,48 +133,60 @@
   <div class="column">Third column</div>
 </div>
 -->
-        <footer class="footer ">
-            <div class="columns is-desktop level">
-                <div class="column level-item" >
-                    <div>
-                        <p>Contact Information</p>
-                        <p><a href="https://www.linkedin.com/in/raven-wilson-a439b9398/">LinkedIn</a></p>
-                        <p><a href="https://github.com/Raven-Wilson">GitHub</a></p>
-                        <p><a href="mailto:18r.m.wilson@gmail.com">Personal Email</a> </p>
-                        <p><a href="mailto:K00321719@student.tus.ie">College Email</a></p>
-                    </div>
-                </div>
-                <div class="column is-desktop level-item" >
-                    <div>
-                        <p>See New Page</p>
-                        <p><a href="/"> Home </a></p>
-                        <p><a href="/education"> Education </a></p>
-                        <p><a href="/experience"> Experience </a></p>
-                        <p><a href="/cv"> Contact/CV </a></p>
-                    </div>
-                </div>
-                <div class="column level-item" >
-                    <a href="/" class=""> 
-                        <img alt="Raven silhouette on blue background" style="height: 5vh; width: auto;" id="head-img" src="{{ url_for('static', filename='image/logo.png') }}"> 
-                    </a>
-                </div>
+      <footer class="footer">
+        <div class="columns is-desktop level">
+          <div class="column level-item">
+            <div>
+              <p>Contact Information</p>
+              <p>
+                <a href="https://www.linkedin.com/in/raven-wilson-a439b9398/"
+                  >LinkedIn</a
+                >
+              </p>
+              <p><a href="https://github.com/Raven-Wilson">GitHub</a></p>
+              <p><a href="mailto:18r.m.wilson@gmail.com">Personal Email</a></p>
+              <p><a href="mailto:K00321719@student.tus.ie">College Email</a></p>
             </div>
-        </footer>
-        </footer>
-        <script>
-            document.addEventListener('DOMContentLoaded', ()=> {
-                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+          </div>
+          <div class="column is-desktop level-item">
+            <div>
+              <p>See New Page</p>
+              <p><a href="/"> Home </a></p>
+              <p><a href="/education"> Education </a></p>
+              <p><a href="/experience"> Experience </a></p>
+              <p><a href="/cv"> Contact/CV </a></p>
+            </div>
+          </div>
+          <div class="column level-item">
+            <a href="/" class="">
+              <img
+                alt="Raven silhouette on blue background"
+                style="height: 5vh; width: auto"
+                id="head-img"
+                src="{{ url_for('static', filename='image/logo.png') }}"
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0,
+        );
 
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
 
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-                    });
-                });
-            });
-        </script>
-    </body>
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+          });
+        });
+      });
+    </script>
+  </body>
 </html>

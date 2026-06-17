@@ -1,73 +1,150 @@
-#header-index {
-    display: grid;
-    height: 90vh;
-    grid-template-columns: 19% 19% 19% 19% 19% 5%;
-    grid-template-rows: 11% 22% 24% 22% 11% 10%;
+/* #header-index {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: 19% 19% 19% 19% 19% 5%;
+  grid-template-rows: 11% 22% 24% 22% 11% 10%;
 }
 #image-continer {
-    grid-column: 1/7;
-    grid-row: 1/6;
-    background-image: url("/static/image/hero.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+  grid-column: 1/7;
+  grid-row: 1/6;
+  background-image: url("/static/image/hero.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 #heroImg {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    display: block;
-    box-shadow: 0 5px 5px #00000080;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  box-shadow: 0 5px 5px #00000080;
 }
 #heroText {
-    grid-column: 4/6;
-    grid-row: 2/5;
-    background-color: #00000080;
-    color: aliceblue;
-    border-radius: 5%;
-    text-align: right;
+  grid-column: 4/6;
+  grid-row: 2/5;
+  background-color: #00000080;
+  color: aliceblue;
+  border-radius: 5%;
+  text-align: right;
 }
 #heroText h1 {
-    margin: 1em;
-    font-size: 3em;
+  margin: 1em;
+  font-size: 3em;
 }
-#heroText p {
-    margin: 3em;
-    font-size: 1.5em;
+#heroText span {
+  margin: 3em;
+  font-size: 1.5em;
 }
 #quote {
-    color: aliceblue;
-    grid-column: 1/6;
-    grid-row: 6/7;
+  color: aliceblue;
+  grid-column: 1/6;
+  grid-row: 6/7;
 }
 #body-container {
-    position: relative;
-    display: grid;
-    /*
+  position: relative;
+  display: grid;
+  /*
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: 7% 83% 10%;
     */
-    height: 100vh;
-    box-sizing: border-box;
+/* height: 100vh;
+  box-sizing: border-box;
 }
 #text {
-    grid-column: 2/3;
-    grid-row: 2/3;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 #left-corner {
-    transform: rotate(90deg);
-    left: 0;
-    position: absolute;
-    bottom: 0;
-    width: 12vw;
+  transform: rotate(90deg);
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  width: 12vw;
 }
 #right-corner {
-    right: 0;
-    position: absolute;
-    bottom: 0;
-    width: 12vw;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  width: 12vw;
 }
 .corner-img {
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+} */
+span::after {
+  content: " Web Development";
+  animation: text 15s infinite;
+  color: rgb(102, 209, 255);
 }
+@keyframes text {
+  0%,
+  25% {
+    content: " Web Development";
+  }
+  26%,
+  50% {
+    content: " Databases";
+  }
+  51%,
+  75% {
+    content: " .NET Development";
+  }
+  76%,
+  100% {
+    content: " Computer Networking";
+  }
+}
+.socialLinks {
+  height: 2em;
+  margin: 0.8em;
+}
+.socialLinks:hover {
+  /* height: 2.1em; */
+  transform: rotate(5deg);
+  /* box-shadow: 0 0 3px rgb(102, 209, 255); */
+}
+#profilePhoto {
+  /* height: 11em; */
+  border-radius: 25px;
+}
+#body-container {
+  /* border-style: solid;
+  border-radius: 25px; */
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.div4 {
+  grid-column: span 6 / span 6;
+  grid-row: span 3 / span 3;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.div5 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 7;
+  padding-left: 1em;
+}
+
+.div6 {
+  grid-column: span 3 / span 3;
+  grid-column-start: 7;
+  grid-row-start: 3;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em;
+}
+
+.div5 img {
+  height: 100%;
+}
+/* background-color: aliceblue; */

@@ -1,45 +1,61 @@
-{% extends 'base.html' %}
-
-{% block head %}
-<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">-->
-<title> Home </title>
-{% endblock %}
-
-{% block body %}
-<section id="header-index" class="hero has-background-info-light is-medium">
-    <!--
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/index.css') }}"
+/>
+<title>Home</title>
+{% endblock %} {% block body %}
+<!-- <section id="header-index" class="hero has-background-info-light is-medium"> -->
+<section id="header-index" class="hero is-medium">
+  <!--
     <div id="image-continer">
     </div>
     -->
-    <div id="heroText" class="hero-body">
-        <h1 class="title is-size-1 has-text-info-dark"> Raven Wilson </h1>
-        <p class="subtitle has-text-info-dark">Student Software Developer</p>
-    </div>
-    
+  <div id="heroText" class="hero-body">
+    <h1 class="title is-size-1">Raven Wilson</h1>
+    <span class="subtitle">Student Software Developer learning</span><br />
+    <a href="https://github.com/Raven-Wilson"
+      ><img
+        src="../static/image/GitHub_Invertocat_White.png"
+        class="socialLinks"
+    /></a>
+    <a href="https://www.linkedin.com/in/raven-wilson-a439b9398/"
+      ><img src="../static/image/InBug-White.png" class="socialLinks"
+    /></a>
+  </div>
 </section>
-<div class="hero is-link is-small has-background-black-ter ">
-        <h2 class="hero-body subtitle has-text-info"> Hi! Thank you for visiting my page </h2>
-    </div>
+<!-- <div class="hero is-link is-small has-background-black-ter">
+  <h2 class="hero-body subtitle has-text-info">
+    Hi! Thank you for visiting my page
+  </h2>
+</div> -->
 <div id="body-container" class="content container">
-    <div id="text" class="m-6">
-        <h2>About Me</h2>
-        <p>I am currently studying Software Development at TUS. I fell in love with coding after partaking in a Women in STEM
-            program by Technovation in secondary school, where we were guided on how to make our own app. I've always loved art so finding a new 
-            interest where I could express my creativity while being able to make something practical immediately let me know this was the career path for me.
-        </p>
-        <p>
-            My goal is to be a full stack developer when I'm finished college. I love the design elements of UX and the idea of being able to create an
-            intricate backend along side it. I also want to be full stack because I like the idea of being able transition and work with different 
-            teams, whether they work with front or backend, within the company I work for in the future.
-        </p>
+  <div id="text" class="m-6 parent">
+    <div class="div4">
+      <h2>About Me</h2>
+      <p>
+        I am currently studying Software Development at TUS. I fell in love with
+        coding after partaking in a Women in STEM program by Technovation in
+        secondary school, where we were guided on how to make our own app. I've
+        always loved art so finding a new interest where I could express my
+        creativity while being able to make something practical immediately let
+        me know this was the career path for me.
+      </p>
+      <p>
+        My goal is to be a full stack developer when I'm finished college. I
+        love the design elements of UX and the idea of being able to create an
+        intricate backend along side it. I also want to be full stack because I
+        like the idea of being able transition and work with different teams,
+        whether they work with front or backend, within the company I work for
+        in the future.
+      </p>
     </div>
-    <!--
-    <div  id="left-corner">
-        <img class="corner-img" src="{{ url_for('static', filename='image/cornerDecoration.png') }}">
+    <div class="div5">
+      <img id="profilePhoto" src="/static/image/photo.jpeg" />
     </div>
-    <div id="right-corner">
-        <img class="corner-img" src="{{ url_for('static', filename='image/cornerDecoration.png') }}">
+    <div class="div6">
+      <p>Software Development - BSc (Hons)</p>
     </div>
-    -->
+  </div>
 </div>
 {% endblock %}

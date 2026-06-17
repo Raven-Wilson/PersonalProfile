@@ -1,5 +1,5 @@
 /* #320A28  #511730 #8E443D #CB9173 #F6D9AE */
-body {
+/* body {
     margin: 0;
     padding: 0;
     background-color: #115D6A ;
@@ -50,4 +50,7 @@ li{
 }
 .section3 {
     text-align: right;
+} */
+nav {
+  height: 4em;
 }
