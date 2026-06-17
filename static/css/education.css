@@ -1,4 +1,4 @@
-*, *:before, *:after {
+/* *, *:before, *:after {
       box-sizing: inherit;
 }
 .panels {
@@ -74,4 +74,43 @@ p {
 @keyframes appear {
     from {transform: translate(100%);}
     to {transform: translate(0%);}
+} */
+.college {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
+}
+.semester1 ul,
+.semester2 ul {
+  list-style-type: none;
+}
+.semester1,
+.semester2 {
+  background-color: rgb(20, 22, 26);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.semesterTitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+button {
+  width: 100%;
+  margin-top: 0.5em;
+}
+#year3,
+#year2,
+#year1 {
+  display: none;
+}
+.card {
+  margin-left: 12em;
+  margin-right: 12em;
+  background-color: rgb(24, 27, 32);
 }

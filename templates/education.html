@@ -1,71 +1,136 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block head %}
+<title>Education</title>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/education.css') }}"
+/>
+{% endblock %} {% block body %}
+<div class="hero is-small mt-4 ml-6">
+  <div class="hero-body">
+    <h1 class="title has-text-info-light">Education</h1>
+  </div>
+</div>
+<div class="card">
+  <div class="card-content">
+    <div class="card-header">
+      <p class="college  has-text-info">
+        Technological University of the Shannon
+      </p>
+    </div>
+    <div class="content">
+      <p>
+        <strong>Course:</strong> Software Development <br />
+        <!-- GPA: 73% <br /> -->
+        <strong>Modules:</strong> <br />
+      </p>
+      <button class="button" onclick="seeYearThree()">Year 3</button>
+      <span class="parent" id="year3">
+        <div class="semester1">
+          <ul>
+            <li class="semesterTitle">Semester 1:</li>
+            <li>Applications Programming</li>
+            <li>Computer Science</li>
+            <li>Object Modelling & Design</li>
+            <li>Secure Web Application Development</li>
+            <li>Software Development Group Project</li>
+          </ul>
+        </div>
+      </span>
+      <br />
+      <button class="button" onclick="seeYearTwo()">Year 2</button>
+      <span class="parent" id="year2">
+        <div class="semester1">
+          <ul>
+            <li class="semesterTitle">Semester 1:</li>
+            <li>Object Oriented Theory and Programming</li>
+            <li>Software Development</li>
+            <li>Discrete Mathematics</li>
+            <li>Fundamentals of Data Structures and Algorithms</li>
+            <li>Data Design and Programming</li>
+            <li>Networking Fundamentals</li>
+          </ul>
+        </div>
+        <div class="semester2">
+          <ul>
+            <li class="semesterTitle">Semester 2:</li>
+            <li>Applications Development</li>
+            <li>Real Time Embedded Systems</li>
+            <li>Problem-Solving with Data Structures and Algorithms</li>
+            <li>Data Driven Systems</li>
+            <li>Software Testing</li>
+            <li>Public Cloud Foundations</li>
+          </ul>
+        </div>
+      </span>
+      <br />
+      <button class="button" onclick="seeYearOne()">Year 1</button>
+      <span class="parent" id="year1">
+        <div class="semester1">
+          <ul>
+            <li class="semesterTitle">Semester 1:</li>
+            <li>Introduction To Programming</li>
+            <li>Computer Mathematics</li>
+            <li>Interpersonal Skills</li>
+            <li>Web Development Fundamentals</li>
+            <li>Computer Organisation and Arc</li>
+            <li>Data Essentials</li>
+          </ul>
+        </div>
+        <div class="semester2">
+          <ul>
+            <li class="semesterTitle">Semester 2:</li>
+            <li>Introduction to Object Oriented Programming</li>
+            <li>Mathematical Methods</li>
+            <li>Operating System Fundamentals</li>
+            <li>Structured Programming</li>
+            <li>Responsive Design and Web Development</li>
+            <li>Structured Query Language Essentials</li>
+          </ul>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
 
-{% block head %}
-<title> Education </title>
-<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/education.css') }}">-->
-{% endblock %}
+<div class="card">
+  <div class="card-content">
+    <div class="card-header">
+      <p class="college has-text-info">
+        Limerick College of Further Education
+      </p>
+    </div>
+    <div class="content">
+      <p>
+        <strong>Course:</strong> Software Development <br />
+        <strong>Grade:</strong> Distinction <br />
+        <strong>Modules:</strong> 
+        Web Authoring, Database Methods, Maths for IT, Communications,
+        Fundementals of OPP, Software Architecture
+      </p>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-content">
+    <div class="card-header">
+      <p class="college has-text-info">St. Patricks Comprehensive School</p>
+    </div>
+    <div class="content">
+      <p>
+        <strong>Points:</strong> 379 <br />
+        <br />
+        <hr />
+        Classes: Business Studies, LCVP, History, Art, French, English, Maths,
+        Irish <br />
+        Extra-Curricular Activities: School Musical, Women in STEM, Christmas
+        Crafts for the Elderly
+      </p>
+    </div>
+  </div>
+</div>
 
-{% block body %}
-    <div class="hero is-small mt-4 ml-6">
-        <div class="hero-body">
-            <h1 class="title has-text-info-light">Education</h1>
-        </div>
-    </div>
-    <div class="card m-6">
-        <div class="card-content">
-            <div class="card-header">
-                <p class="is-size-5 has-text-info">Technological University of the Shannon</p>
-            </div>
-            <div class="content">
-                <p>Course: Software Development <br> 
-                GPA: 73% <br> <br> <hr>
-                Modules: <br>
-                Year 3- <br>
-                Semester 1: Applications Programming, Computer Science, Object Modelling & Design, Secure Web Application Development, 
-                Software Development Group Project <br>
-                Year 2- <br>
-                Semester 2: Applications Development, Real Time Embedded Systems, Problem-Solving with Data Structures and Algorithms,
-                Data Driven Systems, Software Testing, Public Cloud Foundations <br>
-                Semester 1: Object Oriented Theory and Programming, Software Development, Discrete Mathematics, Fundamentals of Data 
-                Structures and Algorithms, Data Design and Programming, Networking Fundamentals<br>
-                Year 1- <br>
-                Semester 2: Introduction to Object Oriented Programming, Mathematical Methods, Operating System Fundamentals, Structured Programming,
-                Responsive Design and Web Development, Structured Query Language Essentials <br>
-                Semester 1: Introduction To Programming, Computer Mathematics, Interpersonal Skills, Web Development Fundamentals, 
-                Computer Organisation and Arc, Data Essentials <br>
-            </p>
-            </div>
-        </div>
-    </div>
-    <div class="card m-6">
-        <div class="card-content">
-            <div class="card-header">
-                <p class="is-size-5 has-text-info">Limerick College of Further Education</p>
-            </div>
-            <div class="content">
-                <p>Course: Software Development <br> 
-                Grade: Distinction <br> <br><hr>
-                Modules: Web Authoring, Database Methods, Maths for IT,
-                Communications, Fundementals of OPP, Software Architecture</p>
-            </div>
-        </div>
-    </div>
-    <div class="card m-6">
-        <div class="card-content">
-            <div class="card-header">
-                <p class="is-size-5 has-text-info">St. Patricks Comprehensive School</p>
-            </div>
-            <div class="content">
-                <p>Points: 379 <br> <br><hr>
-                Classes: Business Studies, LCVP, History, Art, French, English, Maths, Irish <br>
-                Extra-Curricular Activities: School Musical, Women in STEM, Christmas Crafts for the Elderly
-            </p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        /*
+<script>
+  /*
         const panels = document.querySelectorAll(".panel");
         function toggleOpen() {
             this.classList.toggle("open");
@@ -79,14 +144,29 @@
         panels.forEach(panel => panel.addEventListener("mouseout", toggleOpen));
         panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
         */
-        const panels = document.querySelectorAll(".panel");
-        /*const last = panels[panels.length - 1];
-        console.log(last);
-        */
-        function open() {
-            this.classList.add("animationText");
-        }
-        const parent = panels.forEach(panel => panel.length-1);
-        console.log(parent);
-    </script>
+  function seeYearThree() {
+    var yearThree = document.getElementById("year3");
+    if (yearThree.style.display === "none") {
+      yearThree.style.display = "inline";
+    } else {
+      yearThree.style.display = "none";
+    }
+  }
+  function seeYearTwo() {
+    var yearTwo = document.getElementById("year2");
+    if (yearTwo.style.display === "none") {
+      yearTwo.style.display = "grid";
+    } else {
+      yearTwo.style.display = "none";
+    }
+  }
+  function seeYearOne() {
+    var yearOne = document.getElementById("year1");
+    if (yearOne.style.display === "none") {
+      yearOne.style.display = "grid";
+    } else {
+      yearOne.style.display = "none";
+    }
+  }
+</script>
 {% endblock %}
